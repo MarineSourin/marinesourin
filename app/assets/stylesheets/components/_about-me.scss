@@ -20,7 +20,7 @@
 p.rotate {
   -webkit-transform:rotate(-3deg);
   position: absolute;
-  bottom: 210px;
+  bottom: 185px;
   left: 315px;
   padding-top: 10px;
   word-break: keep-all;
@@ -28,7 +28,7 @@ p.rotate {
 }
 
 p.rotate.me {
-  bottom: 185px;
+  bottom: 150px;
   left: 600px;
 }
 
@@ -36,6 +36,6 @@ h3.rotate.about {
   color: #E89084;
   position: absolute;
   left: 405px;
-  bottom: 360px;
+  bottom: 350px;
   -webkit-transform:rotate(-3deg);
 }
