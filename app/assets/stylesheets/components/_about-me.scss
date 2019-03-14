@@ -1,0 +1,41 @@
+.wrapper {
+  background-image: url('http://www.stickpng.com/assets/images/5887c26cbc2fc2ef3a186046.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  margin-right: auto; /* 1 */
+  margin-left:  auto; /* 1 */
+
+  max-width: 960px; /* 2 */
+  height: 500px;
+
+  padding: 10px ; /* 3 */
+}
+
+// h3 {
+//   text-align: center;
+//   margin-top: 50px;
+// }
+
+p.rotate {
+  -webkit-transform:rotate(-3deg);
+  position: absolute;
+  bottom: 210px;
+  left: 315px;
+  padding-top: 10px;
+  word-break: keep-all;
+  width: 340px;
+}
+
+p.rotate.me {
+  bottom: 185px;
+  left: 600px;
+}
+
+h3.rotate.about {
+  color: #E89084;
+  position: absolute;
+  left: 405px;
+  bottom: 360px;
+  -webkit-transform:rotate(-3deg);
+}

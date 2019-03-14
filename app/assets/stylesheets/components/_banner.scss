@@ -4,19 +4,19 @@
   padding: 150px 0;
   height: calc(100vh - 70px);
   display: flex;
+  align-items: center;
 }
 
 .banner h1 {
   margin: 0;
-  color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  color: #707070;
+  text-shadow: 1px 1px 3px rgba(255,255,255,0.7);
   font-size: 32px;
-  font-weight: bold;
+  font-weight: bolder;
 }
 
-.banner p {
-  font-size: 20px;
-  color: white;
-  opacity: .7;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+.banner h2 {
+  font-size: 32px;
+  color: #707070;
+  text-shadow: 1px 1px 3px rgba(255,255,255,0.7);
 }
