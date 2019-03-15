@@ -59,23 +59,3 @@
     width: 50%;
   }
 }
-
-.tool {
-  position: relative;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
-  margin-left: 5%;
-}
-
-@media(max-width: 992px) {
-  .tool {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media(max-width: 768px) {
-  .tool {
-    grid-template-columns: 1fr;
-  }
-}
