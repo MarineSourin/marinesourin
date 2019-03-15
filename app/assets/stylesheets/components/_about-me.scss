@@ -1,15 +1,15 @@
-.wrapper {
-  background-image: url('http://www.stickpng.com/assets/images/5887c26cbc2fc2ef3a186046.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-  margin-right: auto; /* 1 */
-  margin-left:  auto; /* 1 */
+.wrapper.trombonne {
+  background-image: url('http://www.stickpng.com/assets/images/5887c26cbc2fc2ef3a186046.png') !important;
+  background-position: center !important;
+  background-repeat: no-repeat!important;
+  position: relative !important;
+  margin-right: auto !important; /* 1 */
+  margin-left:  auto !important; /* 1 */
 
-  max-width: 960px; /* 2 */
-  height: 500px;
+  max-width: 960px !important; /* 2 */
+  min-height: 500px !important;
 
-  padding: 10px ; /* 3 */
+  padding: 10px !important; /* 3 */
 }
 
 // h3 {
