@@ -1,11 +1,19 @@
 .footer {
+  position: sticky;
+  left: 0;
+  bottom: 0;
+  width: 100%;
   background: rgba(232,144,132,0.2);
   display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   align-items: center;
   justify-content: space-between;
   height: 100px;
   padding: 0px 50px;
   color: rgba(0,0,0,0.5);
+  margin-top: 20px;
 }
 .footer-links {
   display: flex;
