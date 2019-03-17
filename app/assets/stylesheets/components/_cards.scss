@@ -1,128 +1,67 @@
-*, *:after, *:before {
-  box-sizing: border-box;
+/* entire container, keeps perspective */
+.flip-container {
+  perspective: 1000px;
 }
+  /* flip the pane when hovered */
+  .flip-container:hover .flipper, .flip-container.hover .flipper {
+    transform: rotateY(180deg);
+  }
 
-.cardContainer {
-  position: relative;
+.flip-container, .front, .back {
   width: 300px;
-  height: 420px;
-  min-width: 300px;
-  min-height: 420px;
-  margin: 4px;
-  -webkit-perspective: 1000px;
-          perspective: 1000px;
+  height: 350px;
 }
 
-.active {
-  -webkit-transform: translateZ(0px) rotateY(180deg) !important;
-          transform: translateZ(0px) rotateY(180deg) !important;
-}
-.active:after {
-  display: none;
-}
+/* flip speed goes here */
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
 
-.card {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-  -moz-backface-visibility: hidden;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  -webkit-transform: translateZ(-100px);
-          transform: translateZ(-100px);
-  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-.card:after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  border-radius: 5px;
-  box-shadow: 0 14px 50px -4px rgba(0, 0, 0, 0.15);
-  opacity: 0;
-  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1.4);
-}
-.card:hover {
-  -webkit-transform: translateZ(0px);
-          transform: translateZ(0px);
-}
-.card:hover:after {
-  opacity: 1;
-}
-.card .side {
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 5px;
-  background-color: white;
-}
-.card .front {
-  z-index: 2;
-}
-.card .back {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-.card .info {
-  padding: 16px;
-}
-
-.front .img {
-  background-color: #dadce2;
-  background-position: center;
-  background-size: cover;
-  border-radius: 5px 5px 0 0;
-  width: 100%;
-  height: 250px;
-  padding: 0px 5px;
-}
-.front .img1 {
-  background-image: url(https://journalduluxe.fr/wp-content/uploads/2017/04/Paule-Ka.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-color: white;
-}
-.front .img2 {
-  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_R4gKFhdRQSf7ZkD78Aq4081brw7vewMNA6QpLq_KdQyGdd0H);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-color: white;
-}
-.front .img3 {
-  background-image: url(https://a0a73a99cbfedf7e3b28-a6fed8c1b4fb343f790cc1a783af6690.ssl.cf3.rackcdn.com/landing-pages/brands/jenny-packham/jenny-packham-black.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-color: white;
-}
-.front .img4 {
-  background-image: url(http://www.jaimelesstartups.fr/wp-content/uploads/2017/06/Logo_twim_blanc_300.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-color: white;
-}
-.front .img5 {
-  background-image: url(https://upload.wikimedia.org/wikipedia/fr/thumb/e/e3/Logo_Saint-Gobain.png/280px-Logo_Saint-Gobain.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-color: white;
-}
-.front .img6 {
-  background-image: url(http://tous-logos.com/wp-content/uploads/2017/06/Prada-Logo.png);
-  background-size: contain;
-    background-repeat: no-repeat;
-    background-color: white;
-}
-
-.back {
   position: relative;
 }
-.back h2 {
-  margin-top: 6px;
-  margin-bottom: 18px;
+
+/* hide back of pane during swap */
+.front, .back {
+  backface-visibility: hidden;
+
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
+/* front pane, placed above back */
+.front {
+  background-color: white;
+  border: 0.5px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  z-index: 2;
+  /* for firefox 31 */
+  transform: rotateY(0deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+/* back, initially hidden pane */
+.back {
+  background-color: white;
+  border-radius: 5px;
+  transform: rotateY(180deg);
+  border: 0.5px solid rgba(0, 0, 0, 0.2);
+  font-size: 12px;
+  height: auto;
+}
+
+.logo {
+  width: 250px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.texte {
+  margin-top: 15px;
+  line-height: 10px;
+}
