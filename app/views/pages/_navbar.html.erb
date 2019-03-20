@@ -6,10 +6,17 @@
 
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
-    <%= link_to "Home", root_path, class: "navbar-wagon-item navbar-wagon-link" %>
-    <%= link_to "CV", cvs_path, class: "navbar-wagon-item navbar-wagon-link" %>
-    <%= link_to "Portfolio", portfolios_path, class: "navbar-wagon-item navbar-wagon-link" %>
-    <%= link_to "Contact", contacts_path, class: "navbar-wagon-item navbar-wagon-link" %>
+    <ul>
+      <li><%= link_to "Home", root_path %></li>
+      <li><%= link_to "CV", cvs_path %></li>
+      <li><%= link_to "Portfolio", portfolios_path %></li>
+      <li><%= link_to "Contact", contacts_path %></li>
+    </ul>
+
+<!--     <%#= link_to "Home", root_path, class: "navbar-wagon-item navbar-wagon-link" %>
+    <%#= link_to "CV", cvs_path, class: "navbar-wagon-item navbar-wagon-link" %>
+    <%#= link_to "Portfolio", portfolios_path, class: "navbar-wagon-item navbar-wagon-link" %>
+    <%#= link_to "Contact", contacts_path, class: "navbar-wagon-item navbar-wagon-link" %> -->
   </div>
     <!-- Profile picture with dropdown list -->
    <!--  <div class="navbar-wagon-item">
