@@ -1,139 +1,59 @@
 <!-- Card 1 -->
-<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-  <div class="flipper">
-    <div class="front">
-      <div class="logo">
-        <%= image_tag 'Prada.png', width: 250 %>
-      </div>
-      <div class="texte">
-        <h4>Prada</h4>
-        <p>Temporary saleswoman</p>
-        <p><i class="fas fa-map-marker-alt"></i> Paris</p>
-        <p>October 2018 - December 2018</p>
-      </div>
+<div class="card-category">
+  <button type="button" class="btn btn-perso" data-toggle="modal" data-target="#myModal-prada">
+    <div class="card-content">
+      <img src="<%= image_path "Prada.png" %>" alt="">
     </div>
-    <div class="back">
-      <p>Hello back</p>
-    </div>
-  </div>
+  </button>
+  <%= render 'pages/modal-prada' %>
 </div>
 
 <!-- Card 2 -->
-<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-  <div class="flipper">
-    <div class="front">
-      <div class="logo">
-        <%= image_tag 'Saint-Gobain.png', width: 250 %>
-      </div>
-      <div class="texte">
-        <h4>Saint-Gobain Building Glass Europe</h4>
-        <p>e-Commerce Deployment Assistant</p>
-        <p><i class="fas fa-map-marker-alt"></i> Paris</p>
-        <p>September 2016 - September 2018</p>
-      </div>
+<div class="card-category">
+  <button type="button" class="btn btn-perso" data-toggle="modal" data-target="#myModal-sg">
+    <div class="card-content">
+      <img src="<%= image_path "Saint-Gobain.png" %>" alt="">
     </div>
-    <div class="back">
-      <p>Work/study training program</p>
-      <ol>
-        <li>Web & eCommerce integration:</li>
-        <ul>
-          <li>Builds a common catalogue of products available through eCommerce</li>
-          <li>Coordinates the presentation of the offer with all countries</li>
-          <li>Coordinates with the external agency to pilot the project of integrating both systems</li>
-          <li>Closely follow-up the integration with the countries and makes sure all countries meet the deadlines</li>
-        </ul>
-        <li>Customer experience:</li>
-        <ul>
-          <li>Helps spread the European marketing kit and gathers feedbacks from the countries</li>
-          <li>Makes sure the App is compliant with customers’ expectations and gathers feedbacks from the customers</li>
-        </ul>
-        <li>Sales support projects:</li>
-        <ul>
-          <li>Coordinates implementation of the rapid learning in the live countries</li>
-          <li>Pilots the adaptation and translation of the rapid learning in upcoming countries</li>
-          <li>Pilots the adaptation and translation of the printed catalogue in upcoming countries</li>
-        </ul>
-      </ol>
-    </div>
-  </div>
+  </button>
+  <%= render 'pages/modal-sg' %>
 </div>
 
 <!-- Card 3 -->
-<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-  <div class="flipper">
-    <div class="front">
-      <div class="logo">
-        <%= image_tag 'Twim.jpg', width: 150 %>
-      </div>
-      <div class="texte">
-        <h4>TWIM</h4>
-        <p> Digital strategy consultant</p>
-        <p><i class="fas fa-map-marker-alt"></i> Paris</p>
-        <p>January 2018 - July 2018</p>
-      </div>
+<div class="card-category">
+  <button type="button" class="btn btn-perso" data-toggle="modal" data-target="#myModal-twim">
+    <div class="card-content">
+      <img src="<%= image_path "Twim.png" %>" alt="">
     </div>
-    <div class="back">
-      <p>Hello back</p>
-    </div>
-  </div>
+  </button>
+  <%= render 'pages/modal-twim' %>
 </div>
 
 <!-- Card 4 -->
-<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-  <div class="flipper">
-    <div class="front">
-      <div class="logo">
-        <%= image_tag 'Jenny-Packham.png', width: 250 %>
-      </div>
-      <div class="texte">
-        <h4>Jenny Packham</h4>
-        <p>Bridal Sales Assistant</p>
-        <p><i class="fas fa-map-marker-alt"></i> London</p>
-        <p>January 2016 - June 2016</p>
-      </div>
+<div class="card-category">
+  <button type="button" class="btn btn-perso" data-toggle="modal" data-target="#myModal-jp">
+    <div class="card-content">
+      <img src="<%= image_path "Jenny-Packham.png" %>" alt="">
     </div>
-    <div class="back">
-      <p>Hello back</p>
-    </div>
-  </div>
+  </button>
+  <%= render 'pages/modal-jp' %>
 </div>
 
 <!-- Card 5 -->
-<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-  <div class="flipper">
-    <div class="front">
-      <div class="logo">
-        <%= image_tag 'Petites-Soeurs.png', width: 150 %>
-      </div>
-      <div class="texte">
-        <h4>Les Petites Soeurs des Pauvres</h4>
-        <p>Voluntary</p>
-        <p><i class="fas fa-map-marker-alt"></i> Paris</p>
-        <p>December 2014 - April 2015</p>
-      </div>
+<div class="card-category">
+  <button type="button" class="btn btn-perso" data-toggle="modal" data-target="#myModal-ps">
+    <div class="card-content">
+      <img src="<%= image_path "Petites-Soeurs.png" %>" alt="" class='img-lg'>
     </div>
-    <div class="back">
-      <p>Hello back</p>
-    </div>
-  </div>
+  </button>
+  <%= render 'pages/modal-ps' %>
 </div>
 
 <!-- Card 6 -->
-<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-  <div class="flipper">
-    <div class="front">
-      <div class="logo">
-        <%= image_tag 'Paule-Ka.png', width: 250 %>
-      </div>
-      <div class="texte">
-        <h4>Paule Ka</h4>
-        <p>Saleswoman</p>
-        <p><i class="fas fa-map-marker-alt"></i> Paris</p>
-        <p>May 2014 - April 2015</p>
-      </div>
+<div class="card-category">
+  <button type="button" class="btn btn-perso" data-toggle="modal" data-target="#myModal-pk">
+    <div class="card-content">
+      <img src="<%= image_path "Paule-Ka.png" %>" alt="">
     </div>
-    <div class="back">
-      <p>Hello back</p>
-    </div>
-  </div>
+  </button>
+  <%= render 'pages/modal-pk' %>
 </div>

@@ -32,19 +32,19 @@
   margin: auto;
 }
 
-ul {
+.navbar-wagon-right ul {
   margin: 0;
   padding: 0;
   display: flex;
 }
 
-ul li {
+.navbar-wagon-right ul li {
   list-style: none;
   margin: 0 20px;
   transition: 0.5s;
 }
 
-ul li a {
+.navbar-wagon-right ul li a {
   display: block;
   position: relative;
   text-decoration: none;
@@ -54,14 +54,14 @@ ul li a {
   font-size: 20px;
 }
 
-ul:hover li a {
+.navbar-wagon-right ul:hover li a {
   transform: scale(0.75);
   opacity: 0.2;
   filter: blur(5px);
   text-decoration: none;
 }
 
-ul li a:hover {
+.navbar-wagon-right ul li a:hover {
   transform: scale(1.25);
   opacity: 1;
   filter: blur(0);
@@ -69,7 +69,7 @@ ul li a:hover {
   color: #fff;
 }
 
-ul li a:before {
+.navbar-wagon-right ul li a:before {
   content: '';
   position: absolute;
   top: 0;
@@ -85,7 +85,7 @@ ul li a:before {
   color: #fff;
 }
 
-ul li a:hover:before {
+.navbar-wagon-right ul li a:hover:before {
   transition: transform 0.5s;
   transform-origin: left ;
   transform: scaleX(1);
