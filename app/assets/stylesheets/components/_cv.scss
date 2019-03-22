@@ -100,3 +100,19 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
 }
+
+.languages {
+  text-align: center;
+  margin: 50px 0;
+
+  h2 {
+    color: #E89084;
+    margin-bottom: 20px;
+  }
+}
+
+.language {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
