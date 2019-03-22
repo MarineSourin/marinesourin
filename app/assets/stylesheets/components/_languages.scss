@@ -98,13 +98,12 @@ $label-font-size-redo: $default-size * 4;
     cursor: default;
     display: block;
     position: relative;
-    font-size: $label-font-size;
-    left: $label-font-size-redo / 10;
+    font-size: 20px;
+    left: 13%;
     line-height: $label-font-size-redo * .70;
     position: absolute;
-    right: $label-font-size-redo / 10;
     text-align: center;
-    top: $label-font-size-redo / 10;
+    top: 13%;
     p {
       position: absolute;
       left: 25px;
