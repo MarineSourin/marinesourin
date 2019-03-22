@@ -1,0 +1,36 @@
+.cards-tool {
+  img {
+    width: 100px;
+  }
+}
+
+.card-tool {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-perso:hover img {
+  width: 120px;
+  transition: 0.5s;
+}
+
+
+.card-body {
+  border: none;
+  img {
+    width: 50px;
+  }
+  svg {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 25px;
+  }
+}
+
+.card-prog {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 150px;
+}
