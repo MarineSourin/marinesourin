@@ -39,3 +39,25 @@ h3.rotate.about {
   bottom: 350px;
   -webkit-transform:rotate(-3deg);
 }
+
+@media(max-width: 576px) {
+  .wrapper.trombonne {
+    max-width: 100% !important;
+    min-height: 400px !important;
+    background-size: contain;
+  }
+  p.rotate {
+    top: 140px;
+    left: 70px;
+    font-size: small;
+  }
+  p.rotate.me {
+    top: 235px;
+    left: 289px;
+  }
+  h3.rotate.about {
+    left: 68px;
+    top: 95px;
+  }
+}
+
