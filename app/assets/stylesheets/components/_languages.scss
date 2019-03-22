@@ -1,0 +1,151 @@
+$bg-color: #fff;
+$default-size: 1em;
+$label-font-size: $default-size / 6;
+$label-font-size-redo: $default-size * 4;
+
+@mixin draw-progress($progress, $color) {
+  .pie {
+    .half-circle {
+      border-color: $color;
+    }
+
+    .left-side {
+      transform: rotate($progress * 3.6deg);
+    }
+
+    @if $progress <= 50 {
+      .right-side {
+        display: none;
+      }
+    } @else {
+      clip: rect(auto, auto, auto, auto);
+
+      .right-side {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+@mixin draw-progress--solid($progress, $color, $bg-color) {
+  background: linear-gradient(to right, $color 50%, $bg-color 50%);
+
+  &:before {
+    @if $progress <= 50 {
+      background: $bg-color;
+      transform: rotate((100 - (50 - $progress)) / 100 * 360deg * -1);
+    } @else {
+      background: $color;
+      transform: rotate((100 - $progress) / 100 * 360deg);
+    }
+  }
+}
+
+// -- selectors
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.set-size {
+  font-size: 10em;
+}
+
+.charts-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+}
+
+.pie-wrapper {
+  @include size($default-size, $default-size);
+  float: left;
+  margin: 15px;
+  position: relative;
+
+  &:nth-child(3n + 1) {
+    clear: both;
+  }
+
+  .pie {
+    @include size(100%, 100%);
+    clip: rect(0, $default-size, $default-size, $default-size / 2);
+    left: 0;
+    position: absolute;
+    top: 0;
+
+    .half-circle {
+      @include size(100%, 100%);
+      border: ($default-size / 10) solid #3498db;
+      border-radius: 50%;
+      clip: rect(0, $default-size / 2, $default-size, 0);
+      left: 0;
+      position: absolute;
+      top: 0;
+    }
+  }
+
+  .label {
+    background: $bg-color;
+    border-radius: 50%;
+    bottom: $label-font-size-redo / 10;
+    cursor: default;
+    display: block;
+    position: relative;
+    font-size: $label-font-size;
+    left: $label-font-size-redo / 10;
+    line-height: $label-font-size-redo * .70;
+    position: absolute;
+    right: $label-font-size-redo / 10;
+    text-align: center;
+    top: $label-font-size-redo / 10;
+    p {
+      position: absolute;
+      left: 25px;
+      top: 30px;
+    }
+  }
+
+  .shadow {
+    @include size(100%, 100%);
+    border: $default-size / 10 solid #bdc3c7;
+    border-radius: 50%;
+  }
+
+
+  &.progress-french {
+    @include draw-progress(100, #9EEDE7);
+  }
+
+  &.progress-english {
+    @include draw-progress(95, #FFFCC1);
+  }
+
+  &.progress-spanish {
+    @include draw-progress(85, #BBFFB7);
+  }
+}
+
+.pie-wrapper--solid {
+  border-radius: 50%;
+  overflow: hidden;
+
+  &:before {
+    border-radius: 0 100% 100% 0 / 50%;
+    content: '';
+    display: block;
+    height: 100%;
+    margin-left: 50%;
+    transform-origin: left;
+  }
+
+  .label {
+    background: transparent;
+  }
+}
