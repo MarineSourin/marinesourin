@@ -1,28 +1,73 @@
 .contacts {
+  width: 100%;
+  min-height: 80vh;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  flex-direction: column;
-  h3 {
-    color: #E89084;
-    margin: 40px 0;
-  }
+  margin: 0 auto;
+  // flex-direction: column;
+  // h3 {
+  //   color: #E89084;
+  //   margin: 40px 0;
+  // }
 }
 
-.contact {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
+// .contact {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   flex-direction: row;
+// }
 
-.box {
+.contacts .box {
   text-align: center;
-  padding: 20px;
 }
 
-.icon .fas {
+.contacts .box .icon .fas {
   color: #707070;
-  font-size: 30px;
+  font-size: 40px;
+  cursor: pointer;
   padding-bottom: 20px;
+}
+
+.contacts .box .icon h5,
+.contacts .box .icon p {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 2px 5px;
+  transition-delay: 0.333s;
+  color: transparent;
+}
+
+.contacts .box .fas:hover ~ h5,
+.contacts .box .fas:hover ~ p{
+  color: #707070;
+}
+
+.contacts .box .icon h5:before,
+.contacts .box .icon p:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background: #E89084;
+  transition: 1s;
+}
+
+.contacts .box .icon h5:before {
+  left: initial;
+  right: 100%;
+  background: #fbe9e6;
+}
+
+.contacts .box .fas:hover ~  p:before {
+  left: -100%;
+}
+
+.contacts .box .fas:hover ~ h5:before {
+  left: initial;
+  right: -100%;
 }
