@@ -26,6 +26,19 @@ Rails.application.configure do
   config.assets.js_compressor = :uglifier
   # config.assets.css_compressor = :sass
 
+  config.action_mailer.default_url_options = { host: 'https://marinesourin.herokuapp.com' }
+  config.action_mailer.delivery_method = :smtp
+
+  ActionMailer::Base.smtp_settings = {
+  :user_name => ENV['app128220838@heroku.com'],
+  :password => ENV['Meilleure95!'],
+  :domain => 'heroku.com',
+  :address => 'smtp.sendgrid.net',
+  :port => 587,
+  :authentication => :plain,
+  :enable_starttls_auto => true
+  }
+
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   # config.assets.compile = false
 

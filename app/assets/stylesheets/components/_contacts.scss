@@ -1,11 +1,45 @@
-.page-construction {
-  width: 100%;
-  height: 500px;
+.form-contact {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  img {
-    width: 200px;
+  align-items: center;
+  margin-top: 40px;
+  h3 {
+    margin-bottom: 40px;
+    color: #E89084;
   }
+}
+
+form#new_contact {
+  height: 600px;
+  width: 600px;
+  input {
+    width: 100%;
+  }
+  label {
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+}
+
+textarea#contact_message {
+    // resize: none;
+    width: 100%;
+    height: 125px;
+}
+
+form input#contact_nickname{
+  display: none;
+  visibility: hidden;
+}
+
+form label#contact_nickname{
+  display: none;
+  visibility: hidden;
+}
+
+input.btn.btn-perso2{
+  background-color: #E89084;
+  color: white;
+  width: 150px !important;
 }

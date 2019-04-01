@@ -1,24 +1,27 @@
 <div class="container">
-  <%= form_for @contact do |f| %>
-      <% if flash[:error].present? %>
-          <p> flash[:error]</p>
+  <div class="form-contact">
+  <h3>Let's get in touch!</h3>
+    <%= form_for @contact do |f| %>
+        <% if flash[:error].present? %>
+            <p> flash[:error]</p>
+        <% end %>
+        <%= f.label :name %> <br>
+        <%= f.text_field :name, required: true %>
+
+        <br>
+        <%= f.label :email %> <br>
+        <%= f.text_field :email, required: true %>
+
+        <br>
+        <%= f.label :message %> <br>
+        <%= f.text_area :message, as: :text %>
+
+        <br>
+        <%= f.label :nickname, id:"contact_nickname"%> <br>
+        <%= f.text_field :nickname, hint: 'leave this field blank' %>
+
+        <br>
+        <%= f.submit 'Send Message', class: "btn btn-perso2" %>
       <% end %>
-      <%= f.label :name %> <br>
-      <%= f.text_field :name, required: true %>
-
-      <br>
-      <%= f.label :email %> <br>
-      <%= f.text_field :email, required: true %>
-
-      <br>
-      <%= f.label :message %> <br>
-      <%= f.text_area :message, as: :text %>
-
-
-      <%= f.label :nickname %> <br>
-      <%= f.text_field :nickname, hint: 'leave this field blank' %>
-
-
-      <%= f.submit 'Send Message', class: "button" %>
-    <% end %>
+  </div>
 </div>
