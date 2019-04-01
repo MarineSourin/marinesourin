@@ -1,46 +1,28 @@
 <div class="container">
-  <div class="form-contact">
-  <h3>Let's get in touch!</h3>
-
-  <h5>Email</h5>
-  <p>marinesourin@live.fr</p>
-
-  <h5>Phone</h5>
-  <p>+33 6 88 00 07 60</p>
-
-  <div class="links">
-    <%= link_to "https://www.linkedin.com/in/marinesourin/" do %>
-    <i class="fab fa-linkedin"></i>
-    <% end %>
-    <%= link_to "https://github.com/MarineSourin" do %>
-    <i class="fab fa-github"></i>
-    <% end %>
-  </div>
-
-
-
-    <%#= form_for @contact do |f| %>
-        <%# if flash[:error].present? %>
-<!--             <p> flash[:error]</p>
-        <%# end %>
-        <%#= f.label :name %> <br>
-        <%#= f.text_field :name, required: true %>
-
-        <br>
-        <%#= f.label :email %> <br>
-        <%#= f.text_field :email, required: true %>
-
-        <br>
-        <%#= f.label :message %> <br>
-        <%#= f.text_area :message, as: :text %>
-
-        <br>
-        <%#= f.label :nickname, id:"contact_nickname"%>
-        <br>
-        <%#= f.text_field :nickname, hint: 'leave this field blank' %>
-
-        <br> -->
-        <%#= f.submit 'Send Message', class: "btn btn-perso2" %>
-      <%# end %>
+  <div class="contacts">
+    <h3>Let's get in touch!</h3>
+    <div class="contact">
+      <div class="box">
+        <div class="icon">
+          <i class="fas fa-map-marker-alt" aria-hiden="true"></i>
+          <h5>Address</h5>
+          <p>Paris, France</p>
+        </div>
+      </div>
+          <div class="box">
+        <div class="icon">
+          <i class="fas fa-at" aria-hiden="true"></i>
+          <h5>Email</h5>
+          <p>marinesourin@live.fr</p>
+        </div>
+      </div>
+      <div class="box">
+        <div class="icon">
+          <i class="fas fa-phone" aria-hiden="true"></i>
+          <h5>Phone</h5>
+          <p>+33 6 88 00 07 60</p>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
