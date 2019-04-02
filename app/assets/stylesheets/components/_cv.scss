@@ -101,17 +101,6 @@
   grid-gap: 16px;
 }
 
-@media(max-width: 992px) {
-  .tool {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media(max-width: 576px) {
-  .tool {
-    grid-template-columns: 1fr;
-  }
-}
 
 .languages {
   text-align: center;
@@ -129,14 +118,8 @@
   grid-gap: 16px;
 }
 
-@media(max-width: 992px) {
-  .language {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
 @media(max-width: 576px) {
   .language {
-    grid-template-columns: 1fr;
+    grid-gap: 5px;
   }
 }

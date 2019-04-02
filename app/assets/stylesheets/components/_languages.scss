@@ -91,6 +91,12 @@ $label-font-size-redo: $default-size * 4;
     }
   }
 
+  @media(max-width: 576px) {
+    .pie {
+      @include size(80%, 80%);
+    }
+  }
+
   .label {
     background: $bg-color;
     border-radius: 50%;
@@ -108,6 +114,17 @@ $label-font-size-redo: $default-size * 4;
       position: absolute;
       left: 25px;
       top: 30px;
+    }
+  }
+
+  @media(max-width: 576px) {
+    .label {
+      font-size: 15px;
+      p {
+      position: absolute;
+      left: 18px;
+      top: 25px;
+    }
     }
   }
 

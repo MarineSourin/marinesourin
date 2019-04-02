@@ -4,6 +4,14 @@
   }
 }
 
+@media(max-width: 576px) {
+  .cards-tool {
+    img {
+      width: 60px;
+    }
+  }
+}
+
 .card-tool {
   display: flex;
   flex-direction: column;
@@ -15,6 +23,13 @@
   transition: 0.5s;
 }
 
+
+@media(max-width: 576px) {
+  .btn-perso:hover img {
+    width: 80px;
+    transition: 0.5s;
+  }
+}
 
 .card-body {
   border: none;
@@ -28,6 +43,21 @@
   }
 }
 
+
+
+@media(max-width: 576px) {
+  .card-body {
+    border: none;
+    img {
+      width: 30px;
+    }
+    svg {
+      width: 30px;
+      height: 30px;
+      margin-bottom: 10px;
+    }
+  }
+}
 .card-prog {
   display: flex;
   flex-direction: row;
