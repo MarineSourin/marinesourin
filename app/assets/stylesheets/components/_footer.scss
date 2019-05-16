@@ -30,3 +30,9 @@
   color: #E89084;
   font-size: 28px;
 }
+
+@media(max-width: 576px) {
+  .footer-copyright {
+    font-size: 12px;
+  }
+}
