@@ -36,5 +36,8 @@
 @media(max-width: 576px) {
   .portofolio-photos {
     grid-template-columns: 1fr;
+    .hide {
+      display: none;
+    }
   }
 }
