@@ -53,3 +53,27 @@
   }
 }
 
+@media(max-width: 576px) {
+  .contacts {
+    h1 {
+      font-size: 30px;
+    }
+    .skinny_wrapper {
+      width: 300px;
+      .new_contact {
+        width: 250px;
+        input {
+          width: 250px;
+        }
+        textarea {
+          width: 250px;
+        }
+        .button {
+          width: 100px;
+          padding: 5px;
+          margin-left: 70px;
+        }
+      }
+    }
+  }
+}
