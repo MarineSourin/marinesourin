@@ -1,30 +1,31 @@
 <div class="container">
   <div class="contacts">
     <h1 id="page_title">Let's get in touch!</h1>
-
+    <br>
     <div class="skinny_wrapper wrapper_padding">
       <%= form_for @contact do |f| %>
-        <%= f.label :name %><br>
+        <%= f.label :name %>
         <%= f.text_field :name, required: true %>
 
         <br>
 
-        <%= f.label :email %><br>
-        <%= f.email_field :email, required: true %>
+        <%= f.label :email %>
+        <%= f.email_field :email, required: true, placeholder: 'marine@sourin.com' %>
 
         <br>
 
-        <%= f.label :message %><br>
+        <%= f.label :message %>
         <%= f.text_area :message, as: :text %>
 
         <div class="hidden">
-          <%= f.label :nickname %><br>
+          <%= f.label :nickname %>
           <%= f.text_field :nickname, hint: 'Leave this field blank' %>
         </div>
 
         <br>
 
-        <%= f.submit 'Send Email', class: "button" %>
+          <%= f.submit 'Send Email', class: "button" %>
+
       <% end %>
     </div>
 
